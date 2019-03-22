@@ -59,14 +59,14 @@ describe('lib/reporter', () => {
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
 	<testsuite name="http://mock-url/" tests="3" failures="3" errors="0" skipped="0">
-		<testcase classname="mock-selector-1" name="mock-context-1">
-			<failure message="mock-message-1"/>
+		<testcase classname="mock-code-1" name="[http://mock-url/] mock-selector-1">
+			<failure message="mock-message-1&#xA;&#xA;Context: mock-context-1"/>
 		</testcase>
-		<testcase classname="complex > mock-selector-2" name="&lt;span class=&quot;mock-context-2&quot;>foo&lt;/span>">
-			<failure message="mock-message-2"/>
+		<testcase classname="mock-code-2" name="[http://mock-url/] complex > mock-selector-2">
+			<failure message="mock-message-2&#xA;&#xA;Context: &lt;span class=&quot;mock-context-2&quot;>foo&lt;/span>"/>
 		</testcase>
-		<testcase classname="mock-selector, &quot;with bad&quot; characters" name="mock-context, &quot;with bad&quot; characters">
-			<failure message="mock-message, &quot;with bad&quot; characters"/>
+		<testcase classname="mock-code, &quot;with bad&quot; characters" name="[http://mock-url/] mock-selector, &quot;with bad&quot; characters">
+			<failure message="mock-message, &quot;with bad&quot; characters&#xA;&#xA;Context: mock-context, &quot;with bad&quot; characters"/>
 		</testcase>
 	</testsuite>
 </testsuites>
